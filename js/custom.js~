@@ -1,0 +1,75 @@
+//custom.js
+jQuery.fx.interval = 2;
+$(document).ready(function(){
+	$("#open").click(function(){
+		$("#body-wrap").hide();
+		$("#left-pane").hide();
+		$("#nav-wrapper").css("display","block");
+		$("#left-pane-nav").css("display","block");
+		$("#nav-wrapper").animate({width:"100%"});
+		$("#nav").show();
+		//$("#nav-wrapper").animate({height:"100%"});
+	});
+      $("#process-close").click(function(){
+        $("#process").slideToggle();
+        $("#process-close").hide();
+      });
+	$("#close").click(function(){
+		$("#nav").css("display","none");
+		$("#left-pane-nav").css("display","none");
+		$("#nav-wrapper").animate({width:"0%"},"slow");
+		$("#body-wrap").show();
+		$("#left-pane").show();
+	});
+	$(".box-text").mouseenter(function(){
+		//var ele = $(this).parent();
+		//alert($(this).prev().attr("class"));
+		$($(this).prev()).css({display:"none"});
+		$(this).animate({opacity:"1"},"medium");
+	});
+	$(".box-text").mouseleave(function(){
+		$(this).animate({opacity:"0"},"medium");
+		$($(this).prev()).css({display:"block"});
+	});
+/*Disabled rotation animations
+	$(".box").mouseenter(function(){
+		$(this).css({ scale:1.05});
+	});
+	$(".box").mouseleave(function(){
+		$(this).css({scale:1});
+	});
+*/
+});
+
+
+
+//isotope
+		
+		$(document).ready(function(){
+		var $container = $('#content');
+$container.isotope({
+	filter: 'as',
+	animationOptions: {
+     duration: 750,
+     easing: 'linear',
+     queue: false,
+   }
+});
+
+$('#nav a').click(function(){
+  var selector = $(this).attr('data-filter');
+    $container.isotope({ 
+    layoutMode:'fitRows',
+	filter: selector,
+	animationEngine:'best-available',
+	animationOptions: {
+     duration: 750,
+     easing: 'linear',
+     queue: false,
+	 
+   }
+  });
+  return false;
+});
+
+});

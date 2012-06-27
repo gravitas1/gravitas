@@ -1,4 +1,0 @@
-gravitas
-========
-
-The technical fest

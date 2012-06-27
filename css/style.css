@@ -1,0 +1,197 @@
+/*style.css*/
+#body{
+	margin:0px;
+	padding:0px;
+	color:grey;
+	background-color:#7V1211;
+}
+#main_logo{
+	width:300px;
+	height:200px;
+	text-align:center;
+}
+
+#header{
+	text-align:center;
+}
+h2{
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	font-size:40px;
+	color:grey;
+}
+#open,#close{
+	font-size:300%;position:absolute;top:40%;left:15px;cursor:pointer;color:white;
+}
+#left-pane{
+	background-color:#24512c;
+	opacity:0.5;
+	height:100%;
+	width:7%;
+	position: absolute;
+	left:0%;
+        top:32%;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;	
+}
+#left-pane:hover{
+	opacity:1;
+	box-shadow:1px 10px 10px black;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+	-moz-transition:all 1s ease;
+}
+#left-pane-nav{
+	background: url(../images/bg.png) repeat;
+	opacity:0.9;
+	height:100%;
+	width:7%;
+	position: absolute;
+	left:0%;
+	top:0%;
+	display: none;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;	
+}
+#left-pane-nav:hover{
+	opacity:1;
+	box-shadow:1px 10px 10px #FFF;
+	-moz-transition:all 1s ease;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 500ms;
+}
+#nav-wrapper{
+	position:absolute;
+	left:0%;
+	display: none;
+/*	background-image : url(images/bg1.png) repeat-y repeat-x; */
+	background: url(../images/bg1.png);
+	height:768px;
+}
+#body-wrapper{
+	
+	left:15%;
+}
+/*for events wrapper*/
+#nav{
+	text-align:center;
+	width:100%;
+}
+#nav-header{
+	width:700px;
+	height:40px;
+	font-size:20px;
+	text-decoration:none;
+	background-color: #bad588;
+	border:1px solid;
+	border-color:white;
+	border-radius:4px;
+	padding:2px;
+	cursor: pointer;
+	color: #1d450f;
+}
+#nav-header:hover{
+	box-shadow:1px 1px 5px white;
+	border-color:black;
+}
+#content {	
+width:100%;
+margin: 0 auto;
+margin-top: 20px;
+left:7%;
+}
+
+
+.box {
+color: #212121;
+padding: 15px;
+float: left;
+margin-left: 10px;
+margin-right: 10px;
+width: 250px;
+height:150px;
+overflow:hidden;
+background: #ffffff;
+border: 2px solid #787878;
+margin-bottom: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+transition:all 0.5s ease;
+}
+.box:hover{
+	box-shadow:1px 1px 10px #ffffff;
+	background-color: #bad588;
+	opacity:1;
+}
+.box-title {
+	color: #1d450f;
+font-size: 30px;
+margin-bottom: 10px;
+display: block;
+opacity:1;
+}
+.box-text{
+	height:100%;
+	width:100%;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);: none;
+	box-shadow:1px 1px 5px #000;
+}
+#process{
+	position:absolute;
+	top:15%;
+	left:20%;
+	right:30%;
+	width:60%;
+	height:80%;
+	background: url(../images/eventsbg.png) repeat-x;
+	color: #1d450f;
+	display: none;
+	z-index:+2;
+	border:1px solid white;
+	border-radius:5px;
+	overflow: scrollbar-base-color:       #CCCCCC;
+	scrollbar-arrow-color:      #000000;
+	scrollbar-track-color:      #999999;
+	scrollbar-3dlight-color:    #EEEEEE;
+	scrollbar-highlight-color:  #FFFFFF;
+	scrollbar-face-color:       #CCCCCC;
+	scrollbar-shadow-color:     #999999;
+	scrollbar-darkshadow-color: #666666;;
+}
+#process-close{
+	position:absolute;
+	top:10%;
+	left:20%;
+	display: none;
+}
+/*isotope do not alter*/
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
